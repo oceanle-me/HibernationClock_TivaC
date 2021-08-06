@@ -142,15 +142,18 @@ void Initialzation(void){
     HibernateRTCTrimSet(0x7fff);
     HibernateRTCSSMatchSet(0, 0);
     HibernateRTCMatchSet(0,HibernateRTCGet()+15);
-//    SysCtlDelay(SysCtlClockGet()/3/2); //delay 0.5s to ensure a stable system after wake up
-//    Lcd_init();
-//    SysCtlDelay(SysCtlClockGet()/3); //delay 0.5s to ensure a stable system after wake up
-    Lcd_init();
-    synTime = CounterToStructCalender(HibernateRTCGet());
-
-    DisplayLCD_DayTime(synTime);
 
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); //On green LED, informing user that the system is in awake
+//    SysCtlDelay(SysCtlClockGet()/3/2); //delay 0.5s to ensure a stable system after wake up
+    if (!(HIB_RTCC_R > 2)){ //if LCD had been configured (~ RTC run >2s), don't reconfigure
+        Lcd_init();
+    }
+    Lcd_write(0,0,0x01   ,1); // xoa man hinh
+    Delayms(5);
+    Lcd_write(0,0,0x02   ,1); //return home
+    Delayms(5);
+    synTime = CounterToStructCalender(HibernateRTCGet());
+    DisplayLCD_DayTime(synTime);
     Init_UART1();
     Init_UART0_DBG();
 
