@@ -22,7 +22,7 @@
 #include "driverlib/hibernate.h"
 #include "driverlib/timer.h"
 
-
+//aaaaaaaaaaaa
 
 void Hibernate_Int(void);
 void Initialzation(void);
@@ -55,6 +55,7 @@ while(1) {
                DBG("Off Alarm\n");
                DisplayLCD_OffAlarm();
                ClearUARTSynTime();
+               HibernateRTCMatchSet(0,HibernateRTCGet()+10);
            }
            else if ((charGet=='e')&&(UARTSignal== synSignal)) {
                countChar=0;
@@ -65,6 +66,7 @@ while(1) {
                    synTime.hour, synTime.minute, synTime.second);
               DisplayLCD_SynTime(synTime) ;
                ClearUARTSynTime();
+               HibernateRTCMatchSet(0,HibernateRTCGet()+10);
            }
            else if ((charGet=='e')&&(UARTSignal== alarmSignal)) {
                countChar=0;
@@ -74,6 +76,7 @@ while(1) {
                DBG("Set Alarm %u:%u\n",alarmTime.hour,alarmTime.minute);
                DisplayLCD_OnAlarm(alarmTime);
                ClearUARTAlarmTime();
+               HibernateRTCMatchSet(0,HibernateRTCGet()+10);
            }
            else if(UARTSignal== synSignal){
                UARTSynTime[countChar]= charGet;
@@ -95,11 +98,11 @@ void Hibernate_Int(void){
         synTime.hour, synTime.minute, synTime.second);
     HibernateDataGet((uint32_t *)(&alarmTime), 2);
     /*********************************************/
+    DisplayLCD_DayTime(synTime);
+
     if  (CheckAlarm(alarmTime, synTime)) {
         AlarmAction();
     }
-
-    DisplayLCD_DayTime(synTime);
 
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 
@@ -138,13 +141,16 @@ void Initialzation(void){
 
     HibernateRTCTrimSet(0x7fff);
     HibernateRTCSSMatchSet(0, 0);
-    HibernateRTCMatchSet(0,HibernateRTCGet()+20);
-
+    HibernateRTCMatchSet(0,HibernateRTCGet()+15);
+//    SysCtlDelay(SysCtlClockGet()/3/2); //delay 0.5s to ensure a stable system after wake up
+//    Lcd_init();
+//    SysCtlDelay(SysCtlClockGet()/3); //delay 0.5s to ensure a stable system after wake up
     Lcd_init();
     synTime = CounterToStructCalender(HibernateRTCGet());
+
     DisplayLCD_DayTime(synTime);
 
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); //On BlueLED, informing user that the system is in awake
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); //On green LED, informing user that the system is in awake
     Init_UART1();
     Init_UART0_DBG();
 

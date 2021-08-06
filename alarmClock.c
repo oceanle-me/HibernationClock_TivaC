@@ -352,7 +352,7 @@ void AlarmAction(void){
         synTime = CounterToStructCalender(HibernateRTCGet());
         DBG("%u %u/%u/%u %u:%u:%u\n",synTime.wday, synTime.day,synTime.month, synTime.year,
                    synTime.hour, synTime.minute, synTime.second);
-        SysCtlDelay((SysCtlClockGet()/3)*15);//wait 15 seconds
+//        SysCtlDelay((SysCtlClockGet()/3)*15);//wait 15 seconds to DBG
     }
 }
 void AlarmSetUp(void){

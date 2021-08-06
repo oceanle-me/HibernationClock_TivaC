@@ -1,7 +1,7 @@
 # FIXED
 
 main.obj: ../main.c
-main.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/alarmClock.h
+main.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/alarmClock.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdint.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/_ti_config.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/linkage.h
@@ -13,7 +13,7 @@ main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/machine
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/machine/_stdint.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/sys/_stdint.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdbool.h
-main.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/MyI2C.h
+main.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/MyI2C.h
 main.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdarg.h
 main.obj: C:/ti/TivaWare_C_Series-2.2.0.295/inc/hw_memmap.h
 main.obj: C:/ti/TivaWare_C_Series-2.2.0.295/inc/hw_types.h
@@ -37,7 +37,7 @@ main.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/hibernate.h
 main.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/timer.h
 
 ../main.c: 
-C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/alarmClock.h: 
+C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/alarmClock.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdint.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/_ti_config.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/linkage.h: 
@@ -49,7 +49,7 @@ C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/machine/_types.h:
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/machine/_stdint.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/sys/_stdint.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdbool.h: 
-C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/MyI2C.h: 
+C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/MyI2C.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdarg.h: 
 C:/ti/TivaWare_C_Series-2.2.0.295/inc/hw_memmap.h: 
 C:/ti/TivaWare_C_Series-2.2.0.295/inc/hw_types.h: 

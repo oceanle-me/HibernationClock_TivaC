@@ -1,7 +1,7 @@
 # FIXED
 
 alarmClock.obj: ../alarmClock.c
-alarmClock.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/alarmClock.h
+alarmClock.obj: C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/alarmClock.h
 alarmClock.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdint.h
 alarmClock.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/_ti_config.h
 alarmClock.obj: C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/linkage.h
@@ -37,7 +37,7 @@ alarmClock.obj: ../PCF8574A_LCD_123GH6PM.h
 alarmClock.obj: ../MyI2C.h
 
 ../alarmClock.c: 
-C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC/alarmClock.h: 
+C:/Users/Dell/workspace_v10/Hibernation_Clock_TivaC2/alarmClock.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/stdint.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/_ti_config.h: 
 C:/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include/linkage.h: 
