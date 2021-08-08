@@ -106,7 +106,7 @@ void Hibernate_Int(void){
 
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 
-    HibernateRTCMatchSet(0,HIB_RTCC_R+20);
+    HibernateRTCMatchSet(0,((HIB_RTCC_R/60)*60)+60);
 
     HibernateIntDisable(HIBERNATE_INT_RTC_MATCH_0);
     IntMasterDisable();
